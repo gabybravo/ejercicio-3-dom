@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+	</form> 
+	<button id="print" onclick="boton" type="submit">Mostrar</button>
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+
+	<div id="datos" class="text-center"> </div>
+
+	<script>
+	var boton = document.getElementById('print');
+	boton.addEventListener("click", function(click){
+	click.preventDefault();
+	var imName = document.getElementById('name').value;
+	var imMail = document.getElementById('email').value;
+	var espacio = document.getElementById('datos');
+	espacio.innerHTML = "El nombre ingresado es: " + imName + "<br>" + "El correo electrónico ingresado es: " + imMail;
+})
+	</script>
+
+</body>
+</html>
